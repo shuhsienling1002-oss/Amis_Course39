@@ -105,7 +105,7 @@ sentences = [
     {"amis": "Matawa ci ama.", "chi": "爸爸在笑。", "icon": "😆", "source": "Standard Pattern"},
     {"amis": "Rihaday ko niyaro' no mita.", "chi": "我們的部落很平安。", "icon": "🕊️", "source": "Standard Pattern"},
     {"amis": "Adada ko faloco' ako.", "chi": "我的心很痛(心痛)。", "icon": "❤️‍🩹", "source": "Row 470 Context"},
-    {"amis": "Misalimela to ko maomahay to kolong.", "chi": "農夫很珍惜牛。", "icon": "🐂", "source": "User Fix"},
+    {"amis": "Misalimela ko maomahay to kolong.", "chi": "農夫很珍惜牛。", "icon": "🐂", "source": "User Fix"},
 ]
 
 # --- 3. 隨機題庫 (5題) ---
@@ -257,5 +257,6 @@ with tab2:
             
             st.session_state.quiz_questions = final_qs
             safe_rerun()
+
 
 
