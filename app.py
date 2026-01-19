@@ -73,7 +73,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# --- 2. 資料庫 (Unit 39: 18個單字 - 心情與感受) ---
+# --- 2. 資料庫 (Unit 39: 19個單字 - User Fix) ---
 vocab_data = [
     {"amis": "Faloco'", "chi": "心 / 心意 (詞根)", "icon": "❤️", "source": "Row 429", "morph": "Root"},
     {"amis": "Lipahak", "chi": "快樂 (詞根)", "icon": "😄", "source": "Row 4640", "morph": "Root"},
@@ -83,33 +83,55 @@ vocab_data = [
     {"amis": "Olah", "chi": "愛 / 喜歡 (詞根)", "icon": "🤟", "source": "Standard", "morph": "Root"},
     {"amis": "Maolah", "chi": "去愛 / 喜歡", "icon": "😍", "source": "Standard", "morph": "Ma-Olah"},
     {"amis": "Limela", "chi": "珍惜 (詞根)", "icon": "💎", "source": "Row 490", "morph": "Root"},
-    {"amis": "Halimela", "chi": "愛惜 / 珍惜 (傾向)", "icon": "🤲", "source": "Row 1029", "morph": "Ha-Limela"},
+    {"amis": "Misalimela", "chi": "愛惜 / 珍惜 (主動)", "icon": "🤲", "source": "User Fix", "morph": "Misa-Limela"}, # 修正
     {"amis": "Tangic", "chi": "哭 (詞根)", "icon": "💧", "source": "Row 238", "morph": "Root"},
     {"amis": "Tomangic", "chi": "哭泣 (動作)", "icon": "😿", "source": "User Fix", "morph": "T-om-angic"},
     {"amis": "Tawa", "chi": "笑 (詞根)", "icon": "😆", "source": "Standard", "morph": "Root"},
     {"amis": "Matawa", "chi": "笑 / 發笑", "icon": "🤣", "source": "Standard", "morph": "Ma-Tawa"},
     {"amis": "Roray", "chi": "累 / 困難 (詞根)", "icon": "😫", "source": "Row 465", "morph": "Root"},
     {"amis": "Maroray", "chi": "感到累 / 辛苦", "icon": "🥱", "source": "Row 465", "morph": "Ma-Roray"},
-    {"amis": "Rihaday", "chi": "平安 / 安詳 (詞根)", "icon": "🕊️", "source": "Standard", "morph": "Root"},
+    {"amis": "Rihaday", "chi": "平安 / 安詳", "icon": "🕊️", "source": "User Fix", "morph": "State"}, # 修正
     {"amis": "Marihaday", "chi": "平安的", "icon": "😌", "source": "Standard", "morph": "Ma-Rihaday"},
+    {"amis": "Palarihaday", "chi": "祝福 / 使平安", "icon": "🙏", "source": "User Fix", "morph": "Pa-La-Rihaday"}, # 新增
     {"amis": "Adada", "chi": "痛 (詞根/狀態)", "icon": "💔", "source": "Row 470", "morph": "Root"},
 ]
 
 # --- 句子庫 (9句: 嚴格源自 CSV 並移除連字號) ---
 sentences = [
+    {"amis": "Talacowacowa misa'icel ciira, marorayho.", "chi": "無論他如何努力，還是很辛苦(累)。", "icon": "😫", "source": "User Fix"},
     {"amis": "Malipahak kako anini a romi'ad.", "chi": "我今天很快樂。", "icon": "🥳", "source": "Standard Pattern"},
     {"amis": "Mararom ko faloco' no mako.", "chi": "我的心很難過。", "icon": "💔", "source": "Standard Pattern"},
     {"amis": "Maolah ci ina to wawa.", "chi": "媽媽愛孩子。", "icon": "🤱", "source": "Standard Pattern"},
     {"amis": "Matengil ko soni no tangic.", "chi": "聽見了哭聲。", "icon": "🔊", "source": "Row 238"},
     {"amis": "Matawa ci ama.", "chi": "爸爸在笑。", "icon": "😆", "source": "Standard Pattern"},
-    {"amis": "Talacowa misa'icel ciira, marorayho.", "chi": "無論他如何努力，還是很辛苦(累)。", "icon": "😫", "source": "Row 465"},
     {"amis": "Marihaday ko niyaro' no mita.", "chi": "我們的部落很平安。", "icon": "🕊️", "source": "Standard Pattern"},
     {"amis": "Adada ko faloco' ako.", "chi": "我的心很痛(心痛)。", "icon": "❤️‍🩹", "source": "Row 470 Context"},
-    {"amis": "Halimela to ko maomahay to kolong.", "chi": "農夫很珍惜牛。", "icon": "🐂", "source": "Row 490 (Adapted)"},
+    {"amis": "Misalimela to ko maomahay to kolong.", "chi": "農夫很珍惜牛。", "icon": "🐂", "source": "User Fix"},
 ]
 
 # --- 3. 隨機題庫 (5題) ---
 raw_quiz_pool = [
+    {
+        "q": "Talacowacowa misa'icel ciira, marorayho.",
+        "audio": "Talacowacowa misa'icel ciira, marorayho",
+        "options": ["無論他如何努力，還是很累", "無論他去哪裡，都很開心", "無論他做什麼，都不累"],
+        "ans": "無論他如何努力，還是很累",
+        "hint": "Talacowacowa (無論如何/去哪), Maroray (累)"
+    },
+    {
+        "q": "單字測驗：Misalimela",
+        "audio": "Misalimela",
+        "options": ["愛惜/珍惜", "討厭", "丟棄"],
+        "ans": "愛惜/珍惜",
+        "hint": "User Fix: Misalimela"
+    },
+    {
+        "q": "單字測驗：Palarihaday",
+        "audio": "Palarihaday",
+        "options": ["祝福/使平安", "打架", "睡覺"],
+        "ans": "祝福/使平安",
+        "hint": "User Fix: Palarihaday"
+    },
     {
         "q": "Mararom ko faloco' no mako.",
         "audio": "Mararom ko faloco' no mako",
@@ -118,32 +140,11 @@ raw_quiz_pool = [
         "hint": "Mararom (難過) (Standard)"
     },
     {
-        "q": "Talacowa misa'icel ciira, marorayho.",
-        "audio": "Talacowa misa'icel ciira, marorayho",
-        "options": ["無論他如何努力，還是很累", "無論他如何努力，還是很快樂", "無論他如何努力，還是很生氣"],
-        "ans": "無論他如何努力，還是很累",
-        "hint": "Maroray (累/辛苦) (Row 465)"
-    },
-    {
         "q": "單字測驗：Malipahak",
         "audio": "Malipahak",
         "options": ["感到快樂", "感到生氣", "感到難過"],
         "ans": "感到快樂",
         "hint": "Ma- (感到) + Lipahak (快樂)"
-    },
-    {
-        "q": "單字測驗：Tomangic",
-        "audio": "Tomangic",
-        "options": ["哭泣", "大笑", "說話"],
-        "ans": "哭泣",
-        "hint": "Tangic (哭) + -om-"
-    },
-    {
-        "q": "單字測驗：Halimela",
-        "audio": "Halimela",
-        "options": ["愛惜/珍惜", "討厭", "丟棄"],
-        "ans": "愛惜/珍惜",
-        "hint": "Ha- (傾向) + Limela (珍惜)"
     }
 ]
 
@@ -167,7 +168,7 @@ if 'init' not in st.session_state:
 
 # --- 5. 主介面 ---
 st.markdown("<h1 style='text-align: center; color: #AD1457;'>Unit 39: O Faloco'</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; color: #666;'>心情與感受 (Emotions & Feelings)</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: #666;'>心情與感受 (User Corrected)</p>", unsafe_allow_html=True)
 
 tab1, tab2 = st.tabs(["📚 詞彙與句型", "🎲 隨機挑戰"])
 
