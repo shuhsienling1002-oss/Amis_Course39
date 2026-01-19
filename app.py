@@ -91,8 +91,8 @@ vocab_data = [
     {"amis": "Roray", "chi": "累 / 困難 (詞根)", "icon": "😫", "source": "Row 465", "morph": "Root"},
     {"amis": "Maroray", "chi": "感到累 / 辛苦", "icon": "🥱", "source": "Row 465", "morph": "Ma-Roray"},
     {"amis": "Rihaday", "chi": "平安 / 安詳", "icon": "🕊️", "source": "User Fix", "morph": "State"}, # 修正
-    {"amis": "Cirihaday", "chi": "平靜/安逸", "icon": "🙏", "source": "User Fix", "morph": "Cirihaday"}, # 新增
-    {"amis": "Adada", "chi": "痛 (詞根/狀態)", "icon": "💔", "source": "Row 470", "morph": "Root"},
+    {"amis": "Cirihaday", "chi": "平靜 / 安逸", "icon": "🙏", "source": "User Fix", "morph": "Cirihaday"}, # 新增
+    {"amis": "Adada", "chi": "痛 (詞根 / 狀態)", "icon": "💔", "source": "Row 470", "morph": "Root"},
 ]
 
 # --- 句子庫 (9句: 嚴格源自 CSV 並移除連字號) ---
@@ -125,10 +125,10 @@ raw_quiz_pool = [
         "hint": "User Fix: Misalimela"
     },
     {
-        "q": "單字測驗：Palarihaday",
-        "audio": "Palarihaday",
-        "options": ["祝福/使平安", "打架", "睡覺"],
-        "ans": "祝福/使平安",
+        "q": "單字測驗：Cirihaday",
+        "audio": "Cirihaday",
+        "options": ["平靜/安逸", "打架", "睡覺"],
+        "ans": "平靜/安逸",
         "hint": "User Fix: Palarihaday"
     },
     {
@@ -257,4 +257,5 @@ with tab2:
             
             st.session_state.quiz_questions = final_qs
             safe_rerun()
+
 
