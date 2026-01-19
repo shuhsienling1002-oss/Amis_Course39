@@ -91,8 +91,7 @@ vocab_data = [
     {"amis": "Roray", "chi": "累 / 困難 (詞根)", "icon": "😫", "source": "Row 465", "morph": "Root"},
     {"amis": "Maroray", "chi": "感到累 / 辛苦", "icon": "🥱", "source": "Row 465", "morph": "Ma-Roray"},
     {"amis": "Rihaday", "chi": "平安 / 安詳", "icon": "🕊️", "source": "User Fix", "morph": "State"}, # 修正
-    {"amis": "Marihaday", "chi": "平安的", "icon": "😌", "source": "Standard", "morph": "Ma-Rihaday"},
-    {"amis": "Palarihaday", "chi": "祝福 / 使平安", "icon": "🙏", "source": "User Fix", "morph": "Pa-La-Rihaday"}, # 新增
+    {"amis": "Cirihaday", "chi": "平靜/安逸", "icon": "🙏", "source": "User Fix", "morph": "Cirihaday"}, # 新增
     {"amis": "Adada", "chi": "痛 (詞根/狀態)", "icon": "💔", "source": "Row 470", "morph": "Root"},
 ]
 
@@ -104,7 +103,7 @@ sentences = [
     {"amis": "Maolah ci ina to wawa.", "chi": "媽媽愛孩子。", "icon": "🤱", "source": "Standard Pattern"},
     {"amis": "Matengil ko soni no tangic.", "chi": "聽見了哭聲。", "icon": "🔊", "source": "Row 238"},
     {"amis": "Matawa ci ama.", "chi": "爸爸在笑。", "icon": "😆", "source": "Standard Pattern"},
-    {"amis": "Marihaday ko niyaro' no mita.", "chi": "我們的部落很平安。", "icon": "🕊️", "source": "Standard Pattern"},
+    {"amis": "Rihaday ko niyaro' no mita.", "chi": "我們的部落很平安。", "icon": "🕊️", "source": "Standard Pattern"},
     {"amis": "Adada ko faloco' ako.", "chi": "我的心很痛(心痛)。", "icon": "❤️‍🩹", "source": "Row 470 Context"},
     {"amis": "Misalimela to ko maomahay to kolong.", "chi": "農夫很珍惜牛。", "icon": "🐂", "source": "User Fix"},
 ]
@@ -258,3 +257,4 @@ with tab2:
             
             st.session_state.quiz_questions = final_qs
             safe_rerun()
+
